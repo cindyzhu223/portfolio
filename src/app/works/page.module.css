@@ -53,9 +53,8 @@
   position: relative;
   bottom: 0;
   height: 300px;
-  color: #fff;
+  color: #333;
   font-size: 80px;
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
   margin: 0;
