@@ -1,0 +1,108 @@
+.galleryContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  transition: all 200ms ease-in-out;
+}
+
+.imageWrapper {
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.galleryImage {
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+  object-position: top;
+  transition: all 200ms ease-in-out;
+}
+
+.bookDesignImage {
+  object-position: center;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 380px;
+  transition: all 200ms ease-in-out;
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  bottom: 0;
+  height: 300px;
+  color: #fff;
+  font-size: 80px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+  margin: 0;
+}
+
+/* Hover Effects */
+.wrapper:hover .galleryImage {
+  transform: scale(2);
+}
+
+.wrapper:hover .title {
+  bottom: 300px;
+  transform: scale(0.4);
+}
+
+.wrapper:hover .imageWrapper {
+  width: 800px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .galleryImage {
+    width: 100%;
+    height: 200px;
+  }
+
+  .headerWrapper {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .title {
+    height: auto;
+    font-size: 40px;
+  }
+}
