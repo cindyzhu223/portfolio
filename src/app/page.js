@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-const image = "";
+const image = "/home.jpg";
 
 export default function HomePage() {
   return (
