@@ -21,13 +21,4 @@ const worksData = [
   },
 ];
 
-//  {
-//     imageUrl: "/home.jpg",
-//     title: "test",
-//     subtitle: "l3",
-//   },
-//   { imageUrl: "/home.jpg", title: "test", subtitle: "test2" },
-//   { imageUrl: "/home.jpg", title: "test", subtitle: "test2" },
-//   { imageUrl: "/home.jpg", title: "test", subtitle: "test2" },
-
 export default worksData;
