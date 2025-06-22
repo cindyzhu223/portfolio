@@ -1,0 +1,29 @@
+.navLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  opacity: 0.6;
+}
+
+.active {
+  font-weight: 600;
+  color: black;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: black;
+}

@@ -1,5 +1,8 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import styles from "./layout.module.css";
+import NavLink from "./components/navlink/navlink";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,7 +19,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.className}>
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <div className={styles.container}>
+          {/* Sidebar (persistent across pages) */}
+          <aside className={styles.sidebar}>
+            <h1 className={styles.logo}>
+              <Link href="/">Cindy Zhu</Link>
+            </h1>
+            <nav className={styles.nav}>
+              <NavLink href="/works">Works</NavLink>
+              <NavLink href="/about">About</NavLink>
+            </nav>
+          </aside>
+
+          {/* Page content */}
+          <main className={styles.main}>{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
