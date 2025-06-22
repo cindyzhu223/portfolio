@@ -43,7 +43,7 @@ export default function Words() {
   }, [expandedItem, isClosing]);
 
   return (
-    <>
+    <div style={{ overflow: "auto" }}>
       <div className={styles.galleryContainer}>
         {worksData.map((item, id) => (
           <div
@@ -95,6 +95,6 @@ export default function Words() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
