@@ -3,10 +3,12 @@
 import styles from "./page.module.css";
 import React, { useState, useEffect } from "react";
 import worksData from "../../../public/assets/works";
+import { FaTh, FaList } from "react-icons/fa";
 
-export default function Words() {
+export default function Works() {
   const [expandedItem, setExpandedItem] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
+  const [isGalleryView, setIsGalleryView] = useState(false);
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") {
@@ -24,7 +26,7 @@ export default function Words() {
       setTimeout(() => {
         setExpandedItem(null);
         setIsClosing(false);
-      }, 300); // match your animation duration
+      }, 300);
     }
   };
 
@@ -44,30 +46,57 @@ export default function Words() {
 
   return (
     <div className={styles.layoutContainer}>
-      <div className={styles.galleryContainer}>
+      <div className={styles.viewToggleContainer}>
+        <button
+          onClick={() => setIsGalleryView(!isGalleryView)}
+          className={styles.toggleButton}
+          aria-label={
+            isGalleryView ? "Switch to list view" : "Switch to gallery view"
+          }
+        >
+          {isGalleryView ? <FaList size={20} /> : <FaTh size={20} />}
+        </button>
+      </div>
+
+      <div
+        className={`${styles.galleryContainer} ${
+          isGalleryView ? styles.gridView : ""
+        }`}
+      >
         {worksData.map((item, id) => (
           <div
             key={id}
-            className={styles.wrapper}
+            className={`${styles.wrapper} ${
+              isGalleryView ? styles.gridItem : ""
+            }`}
             onClick={() => {
               setExpandedItem(item);
               setIsClosing(false);
             }}
           >
-            <div className={styles.imageWrapper}>
+            <div
+              className={`${styles.imageWrapper} ${
+                isGalleryView ? styles.gridImageWrapper : ""
+              }`}
+            >
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className={styles.galleryImage}
+                className={`${styles.galleryImage} ${
+                  isGalleryView ? styles.gridImage : ""
+                }`}
               />
             </div>
-            <div className={styles.headerWrapper}>
-              <h1 className={styles.title}>{item.title}</h1>
-              <h1 className={styles.subtitle}>{item.subtitle}</h1>
-            </div>
+            {!isGalleryView && (
+              <div className={styles.headerWrapper}>
+                <h1 className={styles.title}>{item.title}</h1>
+                <h1 className={styles.subtitle}>{item.subtitle}</h1>
+              </div>
+            )}
           </div>
         ))}
       </div>
+
       {expandedItem && (
         <div
           className={`${styles.expandedOverlay} ${
@@ -79,7 +108,7 @@ export default function Words() {
               setExpandedItem(null);
               setIsClosing(false);
             }, 300);
-          }} // match duration of fadeOut animation}}
+          }}
         >
           <img
             src={expandedItem.imageUrl}
