@@ -10,7 +10,6 @@
 
 .sidebar {
   width: 30rem;
-  background-color: #fff;
   padding: 10rem 2rem 15rem 8rem;
   display: flex;
   flex-direction: column;
@@ -24,16 +23,18 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 2rem;
-  transition: opacity 0.3s ease;
 }
 
 .logo a {
-  color: black;
+  color: var(--foreground);
   text-decoration: none;
+  transition: opacity 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.logo:hover {
+.logo a:hover {
   opacity: 0.7;
+  color: var(--accent);
 }
 
 .nav {
@@ -46,12 +47,6 @@
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 400;
-  color: #333;
-  transition: opacity 0.3s ease;
-}
-
-.nav a:hover {
-  opacity: 0.6;
 }
 
 .main {
@@ -74,7 +69,6 @@
     align-items: center;
     justify-content: space-between;
     border-right: none;
-    border-bottom: 1px solid #ddd;
     padding: 1rem 2rem;
   }
 

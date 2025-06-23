@@ -2,18 +2,19 @@
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 400;
-  color: #333;
+  color: var(--foreground);
   transition: opacity 0.3s ease;
+  transition: color 0.3s ease;
   position: relative;
 }
 
 .navLink:hover {
-  opacity: 0.6;
+  color: var(--accent-hover);
 }
 
 .active {
   font-weight: 600;
-  color: black;
+  color: var(--accent);
 }
 
 .active::before {
@@ -25,5 +26,5 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--accent);
 }

@@ -1,13 +1,51 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base Colors */
+  --background: #f8f8f8;
+  --foreground: #1a1a1a;
+
+  /* Accent & Highlights */
+  --accent-hover: #8aaaff;
+  --accent: #5f8bff;
+  --muted: #9a9a9a;
+
+  /* Borders & Surfaces */
+  --border: #e0e0e0;
+  --surface: #ffffff;
+  --elevation: rgba(0, 0, 0, 0.04);
+
+  /* Typography */
+  --font-sans: "Montserrat", sans-serif;
+  --font-weight-base: 400;
+  --font-weight-strong: 600;
+  --font-size-base: 1rem;
+  --font-size-title: 1.5rem;
+  --font-size-heading: 2rem;
+
+  /* Spacing & Radius */
+  --radius: 12px;
+  --gap: 5rem;
+  --transition: 200ms ease-in-out;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --accent-hover: #8aaaff;
+    --accent: #5f8bff;
+    --muted: #888888;
+
+    --border: #222222;
+    --surface: #1a1a1a;
+    --elevation: rgba(255, 255, 255, 0.05);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -17,9 +55,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

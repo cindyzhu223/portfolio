@@ -43,7 +43,7 @@ export default function Words() {
   }, [expandedItem, isClosing]);
 
   return (
-    <div style={{ overflow: "auto" }}>
+    <div className={styles.layoutContainer}>
       <div className={styles.galleryContainer}>
         {worksData.map((item, id) => (
           <div
@@ -59,7 +59,6 @@ export default function Words() {
                 src={item.imageUrl}
                 alt={item.title}
                 className={styles.galleryImage}
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
               />
             </div>
             <div className={styles.headerWrapper}>
