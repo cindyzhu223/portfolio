@@ -85,3 +85,13 @@
     height: calc(100vh - 70px);
   }
 }
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav {
+    gap: 1.1rem;
+  }
+}

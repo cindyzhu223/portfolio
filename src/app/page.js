@@ -5,7 +5,13 @@ export default function HomePage() {
     <div className={styles.pageContainer}>
       <div className={styles.pageMain}>
         <div className={styles.imageWrapper}>
-          <img src="/assets/hero.jpg" alt="Hero" />
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcSet="/assets/hero-mobile.png"
+            />
+            <img src="/assets/hero.jpg" alt="Hero" />
+          </picture>
         </div>
       </div>
     </div>

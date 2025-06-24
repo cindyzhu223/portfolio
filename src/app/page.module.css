@@ -26,3 +26,9 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 480px) {
+  .pageMain {
+    padding: 4rem 0;
+  }
+}

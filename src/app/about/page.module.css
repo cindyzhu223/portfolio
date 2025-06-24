@@ -1,0 +1,47 @@
+.container {
+  max-width: 800px;
+  padding: 10rem 2rem 15rem 8rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-strong);
+  color: var(--foreground);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+  max-width: fit-content;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  font-weight: var(--font-weight-base);
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: var(--font-weight-strong);
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.accent:hover {
+  color: var(--accent-hover);
+  cursor: url("/icons/paintbrush.svg") 24 24, pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem;
+  }
+}
