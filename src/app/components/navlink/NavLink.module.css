@@ -1,6 +1,6 @@
 .navLink {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: var(--foreground);
   transition: opacity 0.3s ease;
@@ -13,7 +13,6 @@
 }
 
 .active {
-  font-weight: 600;
   color: var(--accent);
 }
 
@@ -27,4 +26,16 @@
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .active::before {
+    left: 50%;
+    top: 105%;
+    transform: translateY(-50%);
+  }
+
+  .navLink {
+    font-size: 1.3rem;
+  }
 }

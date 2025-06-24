@@ -20,27 +20,15 @@ export default function Works() {
     }
   };
 
-  const handleScroll = () => {
-    if (expandedItem && !isClosing) {
-      setIsClosing(true);
-      setTimeout(() => {
-        setExpandedItem(null);
-        setIsClosing(false);
-      }, 300);
-    }
-  };
-
   useEffect(() => {
     document.body.style.overflow = expandedItem ? "hidden" : "auto";
 
     if (expandedItem) {
       window.addEventListener("keydown", handleKeyDown);
-      window.addEventListener("scroll", handleScroll, { passive: true });
     }
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, [expandedItem, isClosing]);
 
@@ -110,16 +98,18 @@ export default function Works() {
             }, 300);
           }}
         >
-          <img
-            src={expandedItem.imageUrl}
-            alt={expandedItem.title}
-            className={`${styles.expandedImage} ${
-              isClosing ? styles.shrink : styles.scaleUp
-            }`}
-          />
-          <div className={styles.expandedText}>
-            <h1>{expandedItem.title}</h1>
-            <p>{expandedItem.subtitle}</p>
+          <div onClick={(e) => e.stopPropagation()}>
+            <img
+              src={expandedItem.imageUrl}
+              alt={expandedItem.title}
+              className={`${styles.expandedImage} ${
+                isClosing ? styles.shrink : styles.scaleUp
+              }`}
+            />
+            <div className={styles.expandedText}>
+              <h1>{expandedItem.title}</h1>
+              <p>{expandedItem.subtitle}</p>
+            </div>
           </div>
         </div>
       )}
