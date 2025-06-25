@@ -1,6 +1,7 @@
 .container {
   max-width: 800px;
   padding: 10rem 2rem 15rem 5rem;
+  max-height: 90dvh;
 }
 
 .content {

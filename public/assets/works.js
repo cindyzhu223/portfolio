@@ -1,121 +1,16 @@
 const worksData = [
   {
-    imageUrl: "/home.jpg",
+    imageUrls: ["/home.jpg", "test2.jpg"],
+    title: "test",
+    subtitle: "Lorem Ipsum is simply dummy text of the printing ",
+  },
+  {
+    imageUrls: ["/home.jpg"],
     title: "test",
     subtitle: "l3",
   },
   {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-    {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-    {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-    {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3",
-  },
-  {
-    imageUrl: "/test2.jpg",
-    title: "test",
-    subtitle: "l3s sdfsd sdfasd fa",
-  },
-  {
-    imageUrl: "/home.jpg",
-    title: "test",
-    subtitle: "l3 sdfsd s fsdf ss fss s ssd asdf sdsfsd fsdfsdf ",
-  },
-  {
-    imageUrl: "/home.jpg",
+    imageUrls: ["/home.jpg"],
     title: "test",
     subtitle: "l3",
   },
