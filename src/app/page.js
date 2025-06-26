@@ -8,9 +8,9 @@ export default function HomePage() {
           <picture>
             <source
               media="(max-width: 480px)"
-              srcSet="/assets/hero-mobile.png"
+              srcSet="/assets/hero/hero-mobile.png"
             />
-            <img src="/assets/hero.jpg" alt="Hero" />
+            <img src="/assets/hero/hero.jpg" alt="Hero" />
           </picture>
         </div>
       </div>
