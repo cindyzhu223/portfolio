@@ -122,6 +122,7 @@ export default function Works() {
                 className={`${styles.galleryImage} ${
                   isGalleryView ? styles.gridImage : ""
                 }`}
+                loading="lazy"
               />
             </div>
             {!isGalleryView && (
@@ -179,6 +180,7 @@ export default function Works() {
                 className={`${styles.expandedImage} ${
                   isClosing ? styles.shrink : styles.scaleUp
                 }`}
+                loading="lazy"
               />
             </div>
 
