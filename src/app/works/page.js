@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import worksData from "../../../public/assets/works";
 import { FaTh, FaList } from "react-icons/fa";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import Image from "next/image";
 
 export default function Works() {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -116,13 +117,15 @@ export default function Works() {
                 isGalleryView ? styles.gridImageWrapper : ""
               }`}
             >
-              <img
+              <Image
                 src={item.imageUrls?.[0]}
                 alt={item.title}
                 className={`${styles.galleryImage} ${
                   isGalleryView ? styles.gridImage : ""
                 }`}
                 loading="lazy"
+                width={1200}
+                height={900}
               />
             </div>
             {!isGalleryView && (
